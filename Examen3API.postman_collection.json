@@ -1,0 +1,534 @@
+{
+	"info": {
+		"_postman_id": "84b37d7a-49f8-4340-8ec6-62cd5c81f99d",
+		"name": "Examen3API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetByID",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "brandon",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "brandon",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\":\"Mario\",\r\n\"apellidos\": \"Rutch Murillo\",\r\n\"direccionVivienda\" : \"Poas, Alajuela, Costa Rica\",\r\n\"direccionCobro\":\"Poas, Alajuela, Costa Rica\",\r\n\"tarjeta\": \"1234-1234-1234-1234\",\r\n\"fechaVencimiento\" : \"05/22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "brandon",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "brandon",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\":\"Mario\",\r\n\"apellidos\": \"Aguero\",\r\n\"direccionVivienda\" : \"San Jose, San Jose, Costa Rica\",\r\n\"direccionCobro\":\"San Jose, San Jose, Costa Rica\",\r\n\"tarjeta\": \"1234-1234-1234-1234\",\r\n\"fechaVencimiento\" : \"05/22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "brandon",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "brandon",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\":\"Brandon\",\r\n\"apellidos\": \"Rutch Murillo\",\r\n\"direccionVivienda\" : \"Poas, Alajuela, Costa Rica\",\r\n\"direccionCobro\":\"Poas, Alajuela, Costa Rica\",\r\n\"tarjeta\": \"1234-1234-1234-1234\",\r\n\"fechaVencimiento\" : \"05/22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostOrden",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "brandon",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "brandon",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"tipo\":\"camiseta\",\r\n\"cantidad\": 5,\r\n\"path\" : \"C:/User/Images/Image.jpg\",\r\n\"cliente\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ordenes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ordenes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllOrdenes",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ordenes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ordenes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrdenByID",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ordenes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ordenes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteOrden",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "brandon",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "brandon",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\":\"Brandon\",\r\n\"apellidos\": \"Rutch Murillo\",\r\n\"direccionVivienda\" : \"Poas, Alajuela, Costa Rica\",\r\n\"direccionCobro\":\"Poas, Alajuela, Costa Rica\",\r\n\"tarjeta\": \"1234-1234-1234-1234\",\r\n\"fechaVencimiento\" : \"05/22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ordenes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ordenes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutOrden",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "brandon",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "brandon",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"tipo\":\"tasa\",\r\n\"cantidad\": 2,\r\n\"path\" : \"C:/User/Images/Image.jpg\",\r\n\"cliente\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ordenes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ordenes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByAprox",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "tipo",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/clientes/?parametro_busqueda=utch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						""
+					],
+					"query": [
+						{
+							"key": "parametro_busqueda",
+							"value": "utch"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByTipo",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ordenes/buscar_por_tipo?tipo=camiseta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ordenes",
+						"buscar_por_tipo"
+					],
+					"query": [
+						{
+							"key": "tipo",
+							"value": "camiseta"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutCantidad",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "brandon",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "brandon",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"cantidad\": 22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ordenes/actualizar_cantidad/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ordenes",
+						"actualizar_cantidad",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutTipo",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "brandon",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "brandon",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"tipo\": \"tasa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ordenes/actualizar_tipo/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ordenes",
+						"actualizar_tipo",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

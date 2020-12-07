@@ -1,0 +1,61 @@
+#CREATE
+
+mutation {
+  createCliente(nombre: "Brandon", apellidos: "Rutch Murillo", direccionVivienda: "1km sur de la escuela Pedro Aguirre Cerda, Poás, Alajuela, Costa Rica", direccionCobro: "1km sur de la escuela Pedro Aguirre Cerda, Poás, Alajuela, Costa Rica", tarjeta: "1234-1234-1234-1234", fechaVencimiento: "05/24") {
+    id
+  }
+}
+
+# GET BY GUID
+
+{
+  cliente(id: "1") {
+    id
+    nombre
+    apellidos
+    direccionVivienda
+    direccionCobro
+    tarjeta
+    fechaVencimiento
+  }
+}
+
+
+#GET ALL
+
+{
+  clientes {
+    id
+    nombre
+    apellidos
+    direccionVivienda
+    direccionCobro
+    tarjeta
+    fechaVencimiento
+  }
+}
+
+
+#UPDATE
+
+mutation {
+  updateCliente(id: "1", nombre: "Mario", apellidos: "Aguero", direccionVivienda: "San Jose", direccionCobro: "San Jose", tarjeta: "1234-1234-1234-1234", fechaVencimiento: "05/23") {
+    id
+    nombre
+    apellidos
+    direccionVivienda
+    direccionCobro
+    tarjeta
+    fechaVencimiento
+  }
+}
+
+
+#DELETE BY ID
+
+mutation {
+  deleteCliente(id: "1")
+}
+
+
+
