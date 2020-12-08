@@ -35,7 +35,7 @@ public class OrdenController {
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping(path = { "/buscar_por_tipo" })
+	@GetMapping(path = { "/tipo" })
 	public List<Orden> findByTipo(@RequestParam String tipo) {
 		List<Orden>ordenes = this.service.getAllOrdenes();
 		List<Orden>retornable = new ArrayList<>();
@@ -66,7 +66,7 @@ public class OrdenController {
 		}).orElse(ResponseEntity.notFound().build());
 	}
 	
-	@PutMapping(value = "/actualizar_cantidad/{id}")
+	@PutMapping(value = "/cantidad/{id}")
 	public ResponseEntity<Orden> updateCantidad(@PathVariable("id") long id, @RequestBody Orden orden) {
 		return service.getOrdenById(id).map(record -> {
 			
@@ -77,7 +77,7 @@ public class OrdenController {
 		}).orElse(ResponseEntity.notFound().build());
 	}
 	
-	@PutMapping(value = "/actualizar_tipo/{id}")
+	@PutMapping(value = "/tipo/{id}")
 	public ResponseEntity<Orden> updateTipo(@PathVariable("id") long id, @RequestBody Orden orden) {
 		return service.getOrdenById(id).map(record -> {
 			
